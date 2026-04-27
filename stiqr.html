@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>StiqrHub - The Future of Event Ecosystem</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+
+    <!-- Custom Fonts & Styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-primary: #4ade80;
+            --brand-secondary: #2dd4bf;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif !important;
+            background-color: #020617;
+            /* Slate 950 */
+        }
+
+        /* Animated Gradient Background */
+        .reveal .slide-background {
+            background: linear-gradient(-45deg, #020617, #0f172a, #064e3b, #022c22);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Stunning Typography */
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4 {
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 800;
+            text-transform: none;
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .reveal p,
+        .reveal li {
+            color: #e2e8f0;
+            font-weight: 300;
+        }
+
+        /* Glassmorphism Cards */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-sizing: border-box;
+        }
+
+        .glass:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px 0 rgba(74, 222, 128, 0.15);
+            border-color: rgba(74, 222, 128, 0.3);
+        }
+
+        /* Floating Logo Glow */
+        .logo-glow {
+            filter: drop-shadow(0 0 30px rgba(74, 222, 128, 0.5));
+            animation: float 6s ease-in-out infinite;
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Layout Classes to Replace Inline Styles */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .roles-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .role-card {
+            flex: 1 1 calc(33.333% - 15px);
+            min-width: 200px;
+            padding: 20px;
+            font-size: 0.6em;
+            text-align: left;
+        }
+
+        .role-card h4 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .tech-stack-card {
+            padding: 30px;
+            text-align: center;
+            min-width: 250px;
+            flex: 1;
+        }
+
+        .responsive-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        .responsive-hero p {
+            font-size: 0.7em;
+            text-align: left;
+            max-width: 60%;
+            line-height: 1.6;
+        }
+
+        .highlight-text {
+            background: rgba(74, 222, 128, 0.2);
+            padding: 2px 8px;
+            border-radius: 6px;
+            color: #4ade80 !important;
+            font-weight: 600 !important;
+        }
+
+        /* 📱 RESPONSIVE MEDIA QUERIES UNTUK HP 📱 */
+        @media (max-width: 768px) {
+            .reveal .slides {
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            /* Mengecilkan judul di HP */
+            .reveal h1 {
+                font-size: 2.5em !important;
+                margin-top: 0 !important;
+            }
+
+            .reveal h2 {
+                font-size: 1.8em !important;
+            }
+
+            .reveal h3 {
+                font-size: 1.5em !important;
+            }
+
+            /* Layout 2 kolom jadi 1 kolom bertumpuk ke bawah */
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            /* Padding lebih tipis untuk card glass di HP */
+            .glass {
+                padding: 20px !important;
+            }
+
+            /* Roles card menumpuk ke bawah */
+            .roles-grid {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .role-card {
+                width: 100%;
+            }
+
+            /* Tech stack menumpuk ke bawah */
+            .tech-stack {
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .tech-stack-card {
+                min-width: 100%;
+                padding: 20px !important;
+            }
+
+            .tech-stack-card img {
+                height: 80px !important;
+            }
+
+            /* Image dan teks responsive hero */
+            .responsive-hero {
+                flex-direction: column;
+                padding: 20px !important;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .responsive-hero p {
+                max-width: 100%;
+                text-align: center !important;
+            }
+
+            /* Ukuran logo di slide pertama */
+            img[src="frontend/public/logoLingkar.png"] {
+                height: 140px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- INTRO SLIDE -->
+            <section data-auto-animate>
+                <img src="frontend/public/logoLingkar.png" alt="StiqrHub Logo" class="logo-glow"
+                    style="height: 220px; background: transparent; border: none;">
+                <h1 style="font-size: 3.5em; margin-top: 10px;">StiqrHub</h1>
+                <p style="font-size: 1.2em; font-weight: 400; letter-spacing: 2px; text-transform: uppercase;">The
+                    Next-Gen Event Ecosystem</p>
+            </section>
+
+            <!-- THE PROBLEM -->
+            <section data-auto-animate>
+                <h2>Kenapa StiqrHub Hadir?</h2>
+                <div class="grid-2" style="margin-top: 40px;">
+                    <div class="glass fragment fade-up">
+                        <h4 style="font-size: 1.2em;">❌ Manajemen Terpecah</h4>
+                        <p style="font-size: 0.7em;">Organisasi event, tenant, dan asuransi seringkali berjalan
+                            sendiri-sendiri tanpa sistem terpusat.</p>
+                    </div>
+                    <div class="glass fragment fade-up" data-fragment-index="1">
+                        <h4 style="font-size: 1.2em;">❌ Pendaftaran Ribet</h4>
+                        <p style="font-size: 0.7em;">User tidak menyukai proses registrasi panjang, membuat konversi
+                            peserta menjadi rendah.</p>
+                    </div>
+                    <div class="glass fragment fade-up" style="grid-column: 1 / -1; text-align: center;"
+                        data-fragment-index="2">
+                        <h4 style="font-size: 1.2em;">❌ Kurangnya Perlindungan</h4>
+                        <p style="font-size: 0.7em;">Peserta dan penyelenggara kesulitan mengurus jaminan & klaim jika
+                            terjadi masalah.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- THE SOLUTION -->
+            <section data-auto-animate>
+                <h2 style="font-size: 3em;">Solusi: <span
+                        style="color: #fff; -webkit-text-fill-color: #fff;">StiqrHub</span></h2>
+                <p class="glass" style="font-size: 0.9em; line-height: 1.8; margin-top: 30px;">
+                    Satu platform mutakhir yang mengintegrasikan <br>
+                    <strong class="highlight-text">Event Management</strong>, <strong
+                        class="highlight-text">Ticketing</strong>, <strong class="highlight-text">Tenant</strong>, dan
+                    <strong class="highlight-text">Asuransi</strong> <br>
+                    dalam satu antarmuka yang modern dan responsif.
+                </p>
+            </section>
+
+            <!-- 5 ROLES ECOSYSTEM -->
+            <section>
+                <h3>Ekosistem <span style="font-size: 1.2em;">5</span> Pilar</h3>
+                <div class="roles-grid">
+                    <div class="glass role-card fragment zoom-in">
+                        <h4>👨‍💼 Admin</h4>
+                        <p>Control center platform & verifikasi entitas.</p>
+                    </div>
+                    <div class="glass role-card fragment zoom-in" data-fragment-index="1">
+                        <h4>🎭 Event Organizer</h4>
+                        <p>Kreator acara, manajemen tiket & analitik.</p>
+                    </div>
+                    <div class="glass role-card fragment zoom-in" data-fragment-index="2">
+                        <h4>🛡️ Insurer</h4>
+                        <p>Integrasi asuransi & manajemen klaim digital.</p>
+                    </div>
+                    <div class="glass role-card fragment zoom-in" data-fragment-index="3">
+                        <h4>🏪 Tenant</h4>
+                        <p>Manajemen vendor & booth interaktif di event.</p>
+                    </div>
+                    <div class="glass role-card fragment zoom-in" data-fragment-index="4">
+                        <h4>👥 Public / Peserta</h4>
+                        <p>Portal event, pendaftaran, dan pusat informasi.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KEY FEATURE 1 -->
+            <section data-auto-animate>
+                <div class="glass" style="text-align: left; padding: 50px;">
+                    <h4 style="font-size: 1.5em; margin-bottom: 20px;">⚡ Seamless Registration</h4>
+                    <p
+                        style="font-size: 0.8em; margin-bottom: 30px; border-left: 4px solid var(--brand-primary); padding-left: 15px;">
+                        Fokus pada kecepatan Onboarding Pengguna.</p>
+                    <ul style="font-size: 0.7em; line-height: 1.8;">
+                        <li><strong style="color: white;">OTP Bypassed:</strong> Untuk memastikan kecepatan registrasi
+                            tanpa hambatan. User mendaftar dan langsung masuk ke dashboard.</li>
+                        <li><strong style="color: white;">Role-Based Forms:</strong> Form dinamis yang menyesuaikan
+                            input sesuai peran (EO vs Peserta).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- KEY FEATURE 2 & 3 -->
+            <section data-auto-animate>
+                <div class="grid-2">
+                    <div class="glass">
+                        <h4 style="font-size: 1.2em;">🏢 EO Dashboard</h4>
+                        <p style="font-size: 0.6em; line-height: 1.6;">Publikasikan event ke ribuan pengguna secara
+                            real-time. Kelola detail acara, kapasitas, dan pantau pendaftar dengan mudah.</p>
+                    </div>
+                    <div class="glass">
+                        <h4 style="font-size: 1.2em;">📰 Public Portal</h4>
+                        <p style="font-size: 0.6em; line-height: 1.6;">Antarmuka menawan bagi peserta untuk
+                            mengeksplorasi <em>Published Events</em> dan membaca artikel terbaru dari penyelenggara.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESPONSIVENESS -->
+            <section>
+                <h3 style="margin-bottom: 40px;">📱 Ultra Responsive</h3>
+                <div class="glass responsive-hero">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3616/3616215.png" alt="Responsive UI"
+                        class="logo-glow"
+                        style="height: 150px; background: transparent; border: none; box-shadow: none;">
+                    <p>
+                        StiqrHub dibangun dengan pendekatan <strong>Mobile-First</strong>. Apapun perangkat Anda
+                        (Desktop, Tablet, Mobile), pengalaman mengelola dan mencari event tetap sempurna dan tajam.
+                    </p>
+                </div>
+            </section>
+
+            <!-- TECH STACK -->
+            <section>
+                <h3>Dapur Pacu Modern</h3>
+                <div class="tech-stack">
+                    <div class="glass tech-stack-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
+                            style="height: 100px; filter: drop-shadow(0 10px 15px rgba(255,45,32,0.3)); border: none; background: transparent;">
+                        <h4 style="margin-top: 20px; font-size: 1em;">Laravel Core</h4>
+                        <p style="font-size: 0.5em; color: #94a3b8;">Robust Backend API</p>
+                    </div>
+                    <div class="glass tech-stack-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                            style="height: 100px; filter: drop-shadow(0 10px 15px rgba(97,218,251,0.3)); border: none; background: transparent; animation: spin 20s linear infinite;">
+                        <h4 style="margin-top: 20px; font-size: 1em;">React.js + Vite</h4>
+                        <p style="font-size: 0.5em; color: #94a3b8;">Dynamic Frontend UI</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEMO TIME -->
+            <section data-background-color="#4ade80" data-background-transition="zoom">
+                <h2 style="color: #020617 !important; -webkit-text-fill-color: #020617; background: none;">Live Action.
+                </h2>
+                <p style="color: #020617; font-weight: 600; font-size: 1.2em;">Saatnya melihat kehebatan StiqrHub secara
+                    langsung.</p>
+            </section>
+
+            <!-- ENDING -->
+            <section>
+                <img src="frontend/public/logoIcon.svg" alt="StiqrHub Logo" class="logo-glow"
+                    style="height: 120px; background: transparent; border: none;">
+                <h2 style="margin-top: 20px;">Terima Kasih</h2>
+                <p style="font-size: 0.8em; letter-spacing: 1px;">Let's build the future, together.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide',
+            backgroundTransition: 'fade',
+
+            // Konfigurasi agar tulisan tidak jadi super kecil di HP
+            width: '100%',
+            height: '100%',
+            margin: 0.1,
+            minScale: 1,
+            maxScale: 1
+        });
+    </script>
+
+    <style>
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</body>
+
+</html>

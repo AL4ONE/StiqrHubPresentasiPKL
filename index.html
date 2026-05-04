@@ -67,6 +67,11 @@
             font-weight: 300;
         }
 
+        /* Set baseline sizes for Reveal */
+        .reveal {
+            font-size: 34px;
+        }
+
         /* Glassmorphism Cards */
         .glass {
             background: rgba(255, 255, 255, 0.03);
@@ -129,7 +134,7 @@
             flex: 1 1 calc(33.333% - 15px);
             min-width: 200px;
             padding: 20px;
-            font-size: 0.6em;
+            font-size: 1em;
             text-align: left;
         }
 
@@ -161,7 +166,7 @@
         }
 
         .responsive-hero p {
-            font-size: 0.7em;
+            font-size: 1em;
             text-align: left;
             max-width: 60%;
             line-height: 1.6;
@@ -177,6 +182,10 @@
 
         /* 📱 RESPONSIVE MEDIA QUERIES UNTUK HP 📱 */
         @media (max-width: 768px) {
+            .reveal {
+                font-size: 22px;
+            }
+
             .reveal .slides {
                 width: 100% !important;
                 height: 100% !important;
@@ -272,19 +281,19 @@
                 <h2>Kenapa StiqrHub Hadir?</h2>
                 <div class="grid-2" style="margin-top: 40px;">
                     <div class="glass fragment fade-up">
-                        <h4 style="font-size: 1.2em;">❌ Manajemen Terpecah</h4>
-                        <p style="font-size: 0.7em;">Organisasi event, tenant, dan asuransi seringkali berjalan
+                        <h4 style="font-size: 1.4em;">❌ Manajemen Terpecah</h4>
+                        <p style="font-size: 1.1em;">Organisasi event, tenant, dan asuransi seringkali berjalan
                             sendiri-sendiri tanpa sistem terpusat.</p>
                     </div>
                     <div class="glass fragment fade-up" data-fragment-index="1">
-                        <h4 style="font-size: 1.2em;">❌ Pendaftaran Ribet</h4>
-                        <p style="font-size: 0.7em;">User tidak menyukai proses registrasi panjang, membuat konversi
+                        <h4 style="font-size: 1.4em;">❌ Pendaftaran Ribet</h4>
+                        <p style="font-size: 1.1em;">User tidak menyukai proses registrasi panjang, membuat konversi
                             peserta menjadi rendah.</p>
                     </div>
                     <div class="glass fragment fade-up" style="grid-column: 1 / -1; text-align: center;"
                         data-fragment-index="2">
-                        <h4 style="font-size: 1.2em;">❌ Kurangnya Perlindungan</h4>
-                        <p style="font-size: 0.7em;">Peserta dan penyelenggara kesulitan mengurus jaminan & klaim jika
+                        <h4 style="font-size: 1.4em;">❌ Kurangnya Perlindungan</h4>
+                        <p style="font-size: 1.1em;">Peserta dan penyelenggara kesulitan mengurus jaminan & klaim jika
                             terjadi masalah.</p>
                     </div>
                 </div>
@@ -292,9 +301,9 @@
 
             <!-- THE SOLUTION -->
             <section data-auto-animate>
-                <h2 style="font-size: 3em;">Solusi: <span
+                <h2 style="font-size: 3.2em;">Solusi: <span
                         style="color: #fff; -webkit-text-fill-color: #fff;">StiqrHub</span></h2>
-                <p class="glass" style="font-size: 0.9em; line-height: 1.8; margin-top: 30px;">
+                <p class="glass" style="font-size: 1.2em; line-height: 1.8; margin-top: 30px;">
                     Satu platform mutakhir yang mengintegrasikan <br>
                     <strong class="highlight-text">Event Management</strong>, <strong
                         class="highlight-text">Ticketing</strong>, <strong class="highlight-text">Tenant</strong>, dan
@@ -333,11 +342,11 @@
             <!-- KEY FEATURE 1 -->
             <section data-auto-animate>
                 <div class="glass" style="text-align: left; padding: 50px;">
-                    <h4 style="font-size: 1.5em; margin-bottom: 20px;">⚡ Seamless Registration</h4>
+                    <h4 style="font-size: 1.8em; margin-bottom: 20px;">⚡ Seamless Registration</h4>
                     <p
-                        style="font-size: 0.8em; margin-bottom: 30px; border-left: 4px solid var(--brand-primary); padding-left: 15px;">
+                        style="font-size: 1.1em; margin-bottom: 30px; border-left: 4px solid var(--brand-primary); padding-left: 15px;">
                         Fokus pada kecepatan Onboarding Pengguna.</p>
-                    <ul style="font-size: 0.7em; line-height: 1.8;">
+                    <ul style="font-size: 1em; line-height: 1.8;">
                         <li><strong style="color: white;">OTP Bypassed:</strong> Untuk memastikan kecepatan registrasi
                             tanpa hambatan. User mendaftar dan langsung masuk ke dashboard.</li>
                         <li><strong style="color: white;">Role-Based Forms:</strong> Form dinamis yang menyesuaikan
@@ -350,13 +359,13 @@
             <section data-auto-animate>
                 <div class="grid-2">
                     <div class="glass">
-                        <h4 style="font-size: 1.2em;">🏢 EO Dashboard</h4>
-                        <p style="font-size: 0.6em; line-height: 1.6;">Publikasikan event ke ribuan pengguna secara
+                        <h4 style="font-size: 1.4em;">🏢 EO Dashboard</h4>
+                        <p style="font-size: 1em; line-height: 1.6;">Publikasikan event ke ribuan pengguna secara
                             real-time. Kelola detail acara, kapasitas, dan pantau pendaftar dengan mudah.</p>
                     </div>
                     <div class="glass">
-                        <h4 style="font-size: 1.2em;">📰 Public Portal</h4>
-                        <p style="font-size: 0.6em; line-height: 1.6;">Antarmuka menawan bagi peserta untuk
+                        <h4 style="font-size: 1.4em;">📰 Public Portal</h4>
+                        <p style="font-size: 1em; line-height: 1.6;">Antarmuka menawan bagi peserta untuk
                             mengeksplorasi <em>Published Events</em> dan membaca artikel terbaru dari penyelenggara.</p>
                     </div>
                 </div>
@@ -383,14 +392,14 @@
                     <div class="glass tech-stack-card">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg"
                             style="height: 100px; filter: drop-shadow(0 10px 15px rgba(255,45,32,0.3)); border: none; background: transparent;">
-                        <h4 style="margin-top: 20px; font-size: 1em;">Laravel Core</h4>
-                        <p style="font-size: 0.5em; color: #94a3b8;">Robust Backend API</p>
+                        <h4 style="margin-top: 20px; font-size: 1.3em;">Laravel Core</h4>
+                        <p style="font-size: 0.9em; color: #94a3b8;">Robust Backend API</p>
                     </div>
                     <div class="glass tech-stack-card">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
                             style="height: 100px; filter: drop-shadow(0 10px 15px rgba(97,218,251,0.3)); border: none; background: transparent; animation: spin 20s linear infinite;">
-                        <h4 style="margin-top: 20px; font-size: 1em;">React.js + Vite</h4>
-                        <p style="font-size: 0.5em; color: #94a3b8;">Dynamic Frontend UI</p>
+                        <h4 style="margin-top: 20px; font-size: 1.3em;">React.js + Vite</h4>
+                        <p style="font-size: 0.9em; color: #94a3b8;">Dynamic Frontend UI</p>
                     </div>
                 </div>
             </section>
